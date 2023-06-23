@@ -1,19 +1,18 @@
 package modelo;
 
-import java.beans.Transient;
 import java.io.Serializable;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Objects;
+
+
 
 public class Venda implements Serializable{
     
     private String formaPagamento;
-    private Integer qntd, desconto, codVenda;
+    private Integer codVenda;
     private Calendar dataVenda;
-    private Cliente cli;
-    private Produto prod;
-    private Plano plan;
+    private Cliente cliente = new Cliente();
+    
     
     public Venda() {
     }
@@ -26,22 +25,6 @@ public class Venda implements Serializable{
         this.formaPagamento = formaPagamento;
     }
 
-    public Integer getQntd() {
-        return qntd;
-    }
-
-    public void setQntd(Integer qntd) {
-        this.qntd = qntd;
-    }
-
-    public Integer getDesconto() {
-        return desconto;
-    }
-
-    public void setDesconto(Integer desconto) {
-        this.desconto = desconto;
-    }
-
     public Integer getCodVenda() {
         return codVenda;
     }
@@ -49,7 +32,7 @@ public class Venda implements Serializable{
     public void setCodVenda(Integer codVenda) {
         this.codVenda = codVenda;
     }
-    
+
     public Calendar getDataVenda() {
         return dataVenda;
     }
@@ -58,30 +41,15 @@ public class Venda implements Serializable{
         this.dataVenda = dataVenda;
     }
 
-    public Cliente getCli() {
-        return cli;
+    public Cliente getCliente() {
+        return cliente;
     }
 
-    public void setCli(Cliente cli) {
-        this.cli = cli;
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 
-    public Produto getProd() {
-        return prod;
-    }
-
-    public void setProd(Produto prod) {
-        this.prod = prod;
-    }
-
-    public Plano getPlan() {
-        return plan;
-    }
-
-    public void setPlan(Plano plan) {
-        this.plan = plan;
-    }
-
+    
     @Override
     public int hashCode() {
         int hash = 5;
@@ -107,9 +75,10 @@ public class Venda implements Serializable{
         return true;
     }
     
+    /*
     @Transient //não persistente 
     public String getDataFormatada(){
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         return sdf.format(dataVenda.getTime());
-    }
+    }*/
 }
