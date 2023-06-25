@@ -528,6 +528,11 @@ public class FormPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
         resetAllBackgroundBtn();
         setBackgroundColor(btnVendas);
+        FormVenda form = new FormVenda(this,true);
+        //true: Define como janela modal: Sobrepõe o FormPrincipalh e não deixa acessa-lo
+        form.setLocationRelativeTo(null);
+        form.setResizable(false);
+        form.setVisible(true);
     }//GEN-LAST:event_btnVendasMousePressed
 
     private void btnFuncionariosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnFuncionariosMouseEntered
