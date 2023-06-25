@@ -17,7 +17,7 @@ public class DAOVenda {
 
     public boolean incluir(Venda objVenda) {
         
-        String sql = "insert into venda (CLIENTE_codCliente,formaPagamento,dataVenda) values (?,?,?)";
+        String sql = "insert into venda (CLIENTE_codCliente,formaPagamento,dataHora) values (?,?,?)";
         try {
             PreparedStatement pst = Conexao.getPreparedStatement(sql);
             pst.setInt(1, objVenda.getCliente().getCodCliente());
@@ -25,10 +25,7 @@ public class DAOVenda {
             pst.setDate(3, converte.converteBanco(objVenda.getDataVenda()));
 
             if (pst.executeUpdate() > 0) {
-                 ResultSet rs = pst.getGeneratedKeys();// retorna o último codVenda cadastrado
-                if (rs.next()) {
-                    lastId = rs.getInt(1); //armazena o último codVenda cadastrado
-                }
+                
                 JOptionPane.showMessageDialog(null, "Venda cadastrada com sucesso!");
 
             } else {
