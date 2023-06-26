@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class Conexao {
     
@@ -34,13 +35,15 @@ public class Conexao {
     }
     
     //Método para passar os camandos SQL - Insert, Delete, Update, Select
-    public static PreparedStatement getPreparedStatement(String sql){ 
-        if(connect == null)
+    public static PreparedStatement getPreparedStatement(String sql){
+        if(connect==null){
             connect = getConexao();
+        }
         try{
-            return connect.prepareStatement(sql); //passa o comando sql
-        }catch(SQLException exception){
-            System.out.println("Erro de SQL: "+exception.getMessage());
+            return connect.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            
+        }catch(SQLException ex){
+            System.out.println("Erro no SQL"+ex.getMessage());
         }
         return null;
     }
