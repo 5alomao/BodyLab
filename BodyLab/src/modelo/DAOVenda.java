@@ -25,10 +25,12 @@ public class DAOVenda {
             pst.setDate(3, converte.converteBanco(objVenda.getDataVenda()));
 
             if (pst.executeUpdate() > 0) {
-                
+                 ResultSet rs = pst.getGeneratedKeys();// retorna o último idCaixa cadastrado
+                if (rs.next()) {
+                    lastId = rs.getInt(1); //armazena o último idCaixa cadastrado
+                }
                 JOptionPane.showMessageDialog(null, "Venda cadastrada com sucesso!");
-
-            } else {
+            }else {
                  JOptionPane.showMessageDialog(null, "Venda não cadastrada");
 
             }
