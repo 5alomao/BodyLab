@@ -21,7 +21,7 @@ public class DAOItemVenda { // data acess object
             ResultSet rs = pst.executeQuery();
             while (rs.next()) {
                 ItemVenda obj = new ItemVenda();
-                System.out.println("CodVenda=:"+rs.getInt("VENDA_codVenda"));
+                //System.out.println("CodVenda=:"+rs.getInt("VENDA_codVenda"));
                 //obj.getObjVenda().setCodVenda(rs.getInt("VENDA_codVenda"));
                 obj.setCodItemVenda(rs.getInt("codItemVenda"));
                 obj.setObjProduto(objDAOProduto.Localizar(rs.getInt("PRODUTO_codProduto")));
@@ -45,9 +45,9 @@ public class DAOItemVenda { // data acess object
             pst.setInt(1, objItemVenda.getObjVenda().getCodVenda());
             pst.setInt(2, objItemVenda.getObjProduto().getCodProduto());
             pst.setInt(3, objItemVenda.getQuantidade());
-            System.out.println("cod venda="+objItemVenda.getObjVenda().getCodVenda());
-            System.out.println("cod produto="+objItemVenda.getObjProduto().getCodProduto());
-            System.out.println("quantidade="+objItemVenda.getQuantidade());
+            //System.out.println("cod venda="+objItemVenda.getObjVenda().getCodVenda());
+            //System.out.println("cod produto="+objItemVenda.getObjProduto().getCodProduto());
+            //System.out.println("quantidade="+objItemVenda.getQuantidade());
             if (pst.executeUpdate() > 0) {
 
                JOptionPane.showMessageDialog(null, "Item de venda cadastrado com sucesso!");

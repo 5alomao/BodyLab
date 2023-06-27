@@ -20,10 +20,9 @@ public class FormPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        body = new javax.swing.JPanel();
         pnlBackgroud = new javax.swing.JPanel();
         pnlEsquerda = new javax.swing.JPanel();
-        lblVersao = new javax.swing.JLabel();
         btnVendas = new javax.swing.JPanel();
         lblVendas = new javax.swing.JLabel();
         btnFuncionarios = new javax.swing.JPanel();
@@ -34,37 +33,31 @@ public class FormPrincipal extends javax.swing.JFrame {
         lblPlanos = new javax.swing.JLabel();
         btnClientes = new javax.swing.JPanel();
         lblClientes = new javax.swing.JLabel();
+        btnSobre = new javax.swing.JPanel();
+        lblSobre = new javax.swing.JLabel();
+        lblVersao = new javax.swing.JLabel();
+        pnlCima = new javax.swing.JPanel();
+        lblAcademia = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         btnCargos = new javax.swing.JPanel();
         lblCargos = new javax.swing.JLabel();
         btnCategorias = new javax.swing.JPanel();
         lblCategorias = new javax.swing.JLabel();
         btnMarcas = new javax.swing.JPanel();
         lblMarcas = new javax.swing.JLabel();
-        btnSobre = new javax.swing.JPanel();
-        lblSobre = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        pnlCima = new javax.swing.JPanel();
-        lblAcademia = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Gym System");
-        setMinimumSize(new java.awt.Dimension(720, 640));
+        setMinimumSize(new java.awt.Dimension(762, 700));
         setPreferredSize(new java.awt.Dimension(650, 523));
-        setResizable(false);
 
-        jPanel1.setLayout(new java.awt.BorderLayout());
+        body.setLayout(new java.awt.BorderLayout());
 
-        pnlBackgroud.setBackground(new java.awt.Color(255, 255, 255));
+        pnlBackgroud.setBackground(new java.awt.Color(0, 0, 0));
+        pnlBackgroud.setMinimumSize(new java.awt.Dimension(760, 650));
         pnlBackgroud.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         pnlEsquerda.setBackground(new java.awt.Color(48, 48, 48));
         pnlEsquerda.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        lblVersao.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
-        lblVersao.setForeground(new java.awt.Color(255, 255, 255));
-        lblVersao.setText("Versão 1.0");
-        pnlEsquerda.add(lblVersao, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 550, -1, -1));
 
         btnVendas.setBackground(new java.awt.Color(48, 48, 48));
         btnVendas.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -81,6 +74,7 @@ public class FormPrincipal extends javax.swing.JFrame {
 
         lblVendas.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lblVendas.setForeground(new java.awt.Color(255, 255, 255));
+        lblVendas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnVendas.png"))); // NOI18N
         lblVendas.setText("Vendas");
 
         javax.swing.GroupLayout btnVendasLayout = new javax.swing.GroupLayout(btnVendas);
@@ -96,11 +90,11 @@ public class FormPrincipal extends javax.swing.JFrame {
             btnVendasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btnVendasLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblVendas, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+                .addComponent(lblVendas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        pnlEsquerda.add(btnVendas, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 150, 50));
+        pnlEsquerda.add(btnVendas, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, 150, 50));
 
         btnFuncionarios.setBackground(new java.awt.Color(48, 48, 48));
         btnFuncionarios.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -118,6 +112,7 @@ public class FormPrincipal extends javax.swing.JFrame {
         lblFuncionarios.setBackground(new java.awt.Color(51, 51, 51));
         lblFuncionarios.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lblFuncionarios.setForeground(new java.awt.Color(255, 255, 255));
+        lblFuncionarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnFuncionarios.png"))); // NOI18N
         lblFuncionarios.setText("Funcionários");
 
         javax.swing.GroupLayout btnFuncionariosLayout = new javax.swing.GroupLayout(btnFuncionarios);
@@ -133,11 +128,11 @@ public class FormPrincipal extends javax.swing.JFrame {
             btnFuncionariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btnFuncionariosLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblFuncionarios, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+                .addComponent(lblFuncionarios, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        pnlEsquerda.add(btnFuncionarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 150, 50));
+        pnlEsquerda.add(btnFuncionarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 150, 50));
 
         btnProdutos.setBackground(new java.awt.Color(48, 48, 48));
         btnProdutos.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -154,6 +149,7 @@ public class FormPrincipal extends javax.swing.JFrame {
 
         lblProdutos.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lblProdutos.setForeground(new java.awt.Color(255, 255, 255));
+        lblProdutos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnProdutos.png"))); // NOI18N
         lblProdutos.setText("Produtos");
 
         javax.swing.GroupLayout btnProdutosLayout = new javax.swing.GroupLayout(btnProdutos);
@@ -169,11 +165,11 @@ public class FormPrincipal extends javax.swing.JFrame {
             btnProdutosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btnProdutosLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblProdutos, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+                .addComponent(lblProdutos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        pnlEsquerda.add(btnProdutos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 150, 50));
+        pnlEsquerda.add(btnProdutos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 150, 50));
 
         btnPlanos.setBackground(new java.awt.Color(48, 48, 48));
         btnPlanos.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -190,6 +186,7 @@ public class FormPrincipal extends javax.swing.JFrame {
 
         lblPlanos.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lblPlanos.setForeground(new java.awt.Color(255, 255, 255));
+        lblPlanos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnPlanos.png"))); // NOI18N
         lblPlanos.setText("Planos");
 
         javax.swing.GroupLayout btnPlanosLayout = new javax.swing.GroupLayout(btnPlanos);
@@ -205,11 +202,11 @@ public class FormPrincipal extends javax.swing.JFrame {
             btnPlanosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btnPlanosLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblPlanos, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+                .addComponent(lblPlanos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        pnlEsquerda.add(btnPlanos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 150, 50));
+        pnlEsquerda.add(btnPlanos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 150, 50));
 
         btnClientes.setBackground(new java.awt.Color(48, 48, 48));
         btnClientes.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -227,6 +224,7 @@ public class FormPrincipal extends javax.swing.JFrame {
         lblClientes.setBackground(new java.awt.Color(51, 51, 51));
         lblClientes.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lblClientes.setForeground(new java.awt.Color(255, 255, 255));
+        lblClientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnClientes.png"))); // NOI18N
         lblClientes.setText("Clientes");
 
         javax.swing.GroupLayout btnClientesLayout = new javax.swing.GroupLayout(btnClientes);
@@ -242,11 +240,71 @@ public class FormPrincipal extends javax.swing.JFrame {
             btnClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btnClientesLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblClientes, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+                .addComponent(lblClientes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        pnlEsquerda.add(btnClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 50));
+        pnlEsquerda.add(btnClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 150, 50));
+
+        btnSobre.setBackground(new java.awt.Color(48, 48, 48));
+        btnSobre.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnSobreMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnSobreMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnSobreMousePressed(evt);
+            }
+        });
+
+        lblSobre.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lblSobre.setForeground(new java.awt.Color(255, 255, 255));
+        lblSobre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/btnSobre.png"))); // NOI18N
+        lblSobre.setText("Sobre");
+
+        javax.swing.GroupLayout btnSobreLayout = new javax.swing.GroupLayout(btnSobre);
+        btnSobre.setLayout(btnSobreLayout);
+        btnSobreLayout.setHorizontalGroup(
+            btnSobreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnSobreLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblSobre, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        btnSobreLayout.setVerticalGroup(
+            btnSobreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnSobreLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblSobre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        pnlEsquerda.add(btnSobre, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, 150, 50));
+
+        lblVersao.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        lblVersao.setForeground(new java.awt.Color(255, 255, 255));
+        lblVersao.setText("Versão 1.0");
+        pnlEsquerda.add(lblVersao, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 580, 130, -1));
+
+        pnlBackgroud.add(pnlEsquerda, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 610));
+
+        pnlCima.setBackground(new java.awt.Color(31, 31, 31));
+        pnlCima.setLayout(null);
+
+        lblAcademia.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        lblAcademia.setForeground(new java.awt.Color(204, 204, 204));
+        lblAcademia.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblAcademia.setText("Gym System Control");
+        pnlCima.add(lblAcademia);
+        lblAcademia.setBounds(0, 0, 360, 60);
+
+        pnlBackgroud.add(pnlCima, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 60));
+
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo.png"))); // NOI18N
+        pnlBackgroud.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 270, 420, 100));
 
         btnCargos.setBackground(new java.awt.Color(48, 48, 48));
         btnCargos.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -263,6 +321,7 @@ public class FormPrincipal extends javax.swing.JFrame {
 
         lblCargos.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lblCargos.setForeground(new java.awt.Color(255, 255, 255));
+        lblCargos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblCargos.setText("Cargos");
 
         javax.swing.GroupLayout btnCargosLayout = new javax.swing.GroupLayout(btnCargos);
@@ -282,7 +341,7 @@ public class FormPrincipal extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        pnlEsquerda.add(btnCargos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, 150, 50));
+        pnlBackgroud.add(btnCargos, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 590, -1, -1));
 
         btnCategorias.setBackground(new java.awt.Color(48, 48, 48));
         btnCategorias.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -299,6 +358,7 @@ public class FormPrincipal extends javax.swing.JFrame {
 
         lblCategorias.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lblCategorias.setForeground(new java.awt.Color(255, 255, 255));
+        lblCategorias.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblCategorias.setText("Categorias");
 
         javax.swing.GroupLayout btnCategoriasLayout = new javax.swing.GroupLayout(btnCategorias);
@@ -318,7 +378,7 @@ public class FormPrincipal extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        pnlEsquerda.add(btnCategorias, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, 150, 50));
+        pnlBackgroud.add(btnCategorias, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 590, 150, -1));
 
         btnMarcas.setBackground(new java.awt.Color(48, 48, 48));
         btnMarcas.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -335,13 +395,14 @@ public class FormPrincipal extends javax.swing.JFrame {
 
         lblMarcas.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lblMarcas.setForeground(new java.awt.Color(255, 255, 255));
+        lblMarcas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblMarcas.setText("Marcas");
 
         javax.swing.GroupLayout btnMarcasLayout = new javax.swing.GroupLayout(btnMarcas);
         btnMarcas.setLayout(btnMarcasLayout);
         btnMarcasLayout.setHorizontalGroup(
             btnMarcasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnMarcasLayout.createSequentialGroup()
+            .addGroup(btnMarcasLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblMarcas, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
                 .addContainerGap())
@@ -354,78 +415,11 @@ public class FormPrincipal extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        pnlEsquerda.add(btnMarcas, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 410, 150, 50));
+        pnlBackgroud.add(btnMarcas, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 590, 150, -1));
 
-        btnSobre.setBackground(new java.awt.Color(31, 31, 31));
-        btnSobre.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                btnSobreMousePressed(evt);
-            }
-        });
+        body.add(pnlBackgroud, java.awt.BorderLayout.CENTER);
 
-        lblSobre.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        lblSobre.setForeground(new java.awt.Color(255, 255, 255));
-        lblSobre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblSobre.setText("Sobre");
-
-        javax.swing.GroupLayout btnSobreLayout = new javax.swing.GroupLayout(btnSobre);
-        btnSobre.setLayout(btnSobreLayout);
-        btnSobreLayout.setHorizontalGroup(
-            btnSobreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnSobreLayout.createSequentialGroup()
-                .addGap(55, 55, 55)
-                .addComponent(lblSobre)
-                .addContainerGap(52, Short.MAX_VALUE))
-        );
-        btnSobreLayout.setVerticalGroup(
-            btnSobreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblSobre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
-        pnlEsquerda.add(btnSobre, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 500, 150, 30));
-
-        jPanel2.setBackground(new java.awt.Color(255, 153, 0));
-
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("CONTROLE");
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        pnlEsquerda.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 150, -1));
-
-        pnlBackgroud.add(pnlEsquerda, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 150, 580));
-
-        pnlCima.setBackground(new java.awt.Color(31, 31, 31));
-        pnlCima.setLayout(null);
-
-        lblAcademia.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        lblAcademia.setForeground(new java.awt.Color(255, 153, 0));
-        lblAcademia.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblAcademia.setText("BodyLab System");
-        pnlCima.add(lblAcademia);
-        lblAcademia.setBounds(150, 0, 600, 60);
-
-        pnlBackgroud.add(pnlCima, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, 60));
-
-        jPanel1.add(pnlBackgroud, java.awt.BorderLayout.CENTER);
-
-        getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
+        getContentPane().add(body, java.awt.BorderLayout.CENTER);
 
         pack();
         setLocationRelativeTo(null);
@@ -604,6 +598,16 @@ public class FormPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
         resetBackgroundColor(btnMarcas);
     }//GEN-LAST:event_btnMarcasMouseExited
+
+    private void btnSobreMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSobreMouseEntered
+        // TODO add your handling code here:
+        setBackgroundColor(btnSobre);
+    }//GEN-LAST:event_btnSobreMouseEntered
+
+    private void btnSobreMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSobreMouseExited
+        // TODO add your handling code here:
+        resetBackgroundColor(btnSobre);
+    }//GEN-LAST:event_btnSobreMouseExited
     
     void setBackgroundColor(JPanel pnl){
         pnl.setBackground(new Color(153,153,153));
@@ -659,6 +663,7 @@ public class FormPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel body;
     private javax.swing.JPanel btnCargos;
     private javax.swing.JPanel btnCategorias;
     private javax.swing.JPanel btnClientes;
@@ -670,7 +675,6 @@ public class FormPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel btnVendas;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel lblAcademia;
     private javax.swing.JLabel lblCargos;
     private javax.swing.JLabel lblCategorias;
