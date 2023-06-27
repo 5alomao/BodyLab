@@ -49,6 +49,7 @@ public class FormPrincipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(762, 700));
         setPreferredSize(new java.awt.Dimension(650, 523));
+        setResizable(false);
 
         body.setLayout(new java.awt.BorderLayout());
 
