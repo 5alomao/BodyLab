@@ -20,6 +20,8 @@
 
 ### Tela de Cadastro:
 
-<figure>
-  <img src="https://github.com/5alomao/BodyLab/assets/101257752/3fdc1896-a223-4d2f-a86d-9a8205e38592">
-</figure>
+<div align="center">
+  <figure>
+    <img src="https://github.com/5alomao/BodyLab/assets/101257752/3fdc1896-a223-4d2f-a86d-9a8205e38592">
+  </figure>
+<div/>
