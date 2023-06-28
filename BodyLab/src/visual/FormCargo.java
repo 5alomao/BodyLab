@@ -122,7 +122,7 @@ public class FormCargo extends javax.swing.JDialog {
         lblSalarioCargo = new javax.swing.JLabel();
         pnlCima = new javax.swing.JPanel();
         lblAcademia = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
+        pnlNavegacao = new javax.swing.JPanel();
         btnPrimeiro = new javax.swing.JButton();
         btnProximo = new javax.swing.JButton();
         btnAnterior = new javax.swing.JButton();
@@ -130,7 +130,6 @@ public class FormCargo extends javax.swing.JDialog {
         btnFechar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Cadastro Cliente");
         setMinimumSize(new java.awt.Dimension(650, 615));
         setPreferredSize(new java.awt.Dimension(630, 605));
         setResizable(false);
@@ -295,8 +294,8 @@ public class FormCargo extends javax.swing.JDialog {
 
         jPanel2.add(pnlCima, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 650, -1));
 
-        jPanel3.setBackground(new java.awt.Color(102, 102, 102));
-        jPanel3.setLayout(new java.awt.GridLayout());
+        pnlNavegacao.setBackground(new java.awt.Color(102, 102, 102));
+        pnlNavegacao.setLayout(new java.awt.GridLayout(1, 0));
 
         btnPrimeiro.setBackground(new java.awt.Color(102, 102, 102));
         btnPrimeiro.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -318,7 +317,7 @@ public class FormCargo extends javax.swing.JDialog {
                 btnPrimeiroActionPerformed(evt);
             }
         });
-        jPanel3.add(btnPrimeiro);
+        pnlNavegacao.add(btnPrimeiro);
 
         btnProximo.setBackground(new java.awt.Color(102, 102, 102));
         btnProximo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -340,7 +339,7 @@ public class FormCargo extends javax.swing.JDialog {
                 btnProximoActionPerformed(evt);
             }
         });
-        jPanel3.add(btnProximo);
+        pnlNavegacao.add(btnProximo);
 
         btnAnterior.setBackground(new java.awt.Color(102, 102, 102));
         btnAnterior.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -362,7 +361,7 @@ public class FormCargo extends javax.swing.JDialog {
                 btnAnteriorActionPerformed(evt);
             }
         });
-        jPanel3.add(btnAnterior);
+        pnlNavegacao.add(btnAnterior);
 
         btnUltimo.setBackground(new java.awt.Color(102, 102, 102));
         btnUltimo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -384,7 +383,7 @@ public class FormCargo extends javax.swing.JDialog {
                 btnUltimoActionPerformed(evt);
             }
         });
-        jPanel3.add(btnUltimo);
+        pnlNavegacao.add(btnUltimo);
 
         btnFechar.setBackground(new java.awt.Color(102, 102, 102));
         btnFechar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -405,9 +404,9 @@ public class FormCargo extends javax.swing.JDialog {
                 btnFecharActionPerformed(evt);
             }
         });
-        jPanel3.add(btnFechar);
+        pnlNavegacao.add(btnFechar);
 
-        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 650, 60));
+        jPanel2.add(pnlNavegacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 650, 60));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -627,7 +626,6 @@ public class FormCargo extends javax.swing.JDialog {
     private javax.swing.JButton btnUltimo;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
@@ -639,6 +637,7 @@ public class FormCargo extends javax.swing.JDialog {
     private java.util.List<Cargo> listCargo;
     private javax.swing.JTabbedPane pnlAbas;
     private javax.swing.JPanel pnlCima;
+    private javax.swing.JPanel pnlNavegacao;
     private javax.swing.JTable tblCargo;
     private javax.swing.JTextPane txtCodigo;
     private javax.swing.JTextPane txtNomeCargo;

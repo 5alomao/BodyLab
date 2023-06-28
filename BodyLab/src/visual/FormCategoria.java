@@ -5,7 +5,9 @@
  */
 package visual;
 
+import java.awt.Color;
 import java.util.ArrayList;
+import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import modelo.Categoria;
 import modelo.DAOCategoria;
@@ -73,12 +75,7 @@ public class FormCategoria extends javax.swing.JDialog {
 
         listCategoria = org.jdesktop.observablecollections.ObservableCollections.observableList(new ArrayList<Categoria>())
         ;
-        pnlNav = new javax.swing.JPanel();
-        btnPrimeiro = new javax.swing.JButton();
-        btnProximo = new javax.swing.JButton();
-        btnAnterior = new javax.swing.JButton();
-        btnUltimo = new javax.swing.JButton();
-        btnFechar = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
         pnlAbas = new javax.swing.JTabbedPane();
         abaListagem = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -96,52 +93,23 @@ public class FormCategoria extends javax.swing.JDialog {
         txtNomeCategoria = new javax.swing.JTextPane();
         jScrollPane6 = new javax.swing.JScrollPane();
         txtCodigo = new javax.swing.JTextPane();
+        pnlCima = new javax.swing.JPanel();
+        lblAcademia = new javax.swing.JLabel();
+        pnlNavegar = new javax.swing.JPanel();
+        btnPrimeiro = new javax.swing.JButton();
+        btnProximo = new javax.swing.JButton();
+        btnAnterior = new javax.swing.JButton();
+        btnUltimo = new javax.swing.JButton();
+        btnFechar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Cadastro Cliente");
+        setMinimumSize(new java.awt.Dimension(650, 615));
+        setPreferredSize(new java.awt.Dimension(650, 635));
+        getContentPane().setLayout(null);
 
-        pnlNav.setBorder(javax.swing.BorderFactory.createTitledBorder("Navegação"));
-        pnlNav.setLayout(new java.awt.GridLayout(1, 0));
-
-        btnPrimeiro.setText("Primeiro");
-        btnPrimeiro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPrimeiroActionPerformed(evt);
-            }
-        });
-        pnlNav.add(btnPrimeiro);
-
-        btnProximo.setText("Próximo");
-        btnProximo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnProximoActionPerformed(evt);
-            }
-        });
-        pnlNav.add(btnProximo);
-
-        btnAnterior.setText("Anterior");
-        btnAnterior.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAnteriorActionPerformed(evt);
-            }
-        });
-        pnlNav.add(btnAnterior);
-
-        btnUltimo.setText("Último");
-        btnUltimo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUltimoActionPerformed(evt);
-            }
-        });
-        pnlNav.add(btnUltimo);
-
-        btnFechar.setText("Fechar");
-        btnFechar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnFecharActionPerformed(evt);
-            }
-        });
-        pnlNav.add(btnFechar);
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setMinimumSize(new java.awt.Dimension(650, 615));
+        jPanel2.setLayout(null);
 
         abaListagem.setLayout(new java.awt.BorderLayout());
 
@@ -225,30 +193,27 @@ public class FormCategoria extends javax.swing.JDialog {
         abaDados.setLayout(abaDadosLayout);
         abaDadosLayout.setHorizontalGroup(
             abaDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(abaDadosLayout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(abaDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(abaDadosLayout.createSequentialGroup()
+                        .addContainerGap()
                         .addGroup(abaDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblCodigo)
-                            .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(560, 560, 560))
+                            .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(abaDadosLayout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())))
-            .addGroup(abaDadosLayout.createSequentialGroup()
-                .addGap(160, 160, 160)
-                .addGroup(abaDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblNomeCategoria)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(160, 160, 160)
+                        .addGroup(abaDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblNomeCategoria)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(150, Short.MAX_VALUE))
         );
         abaDadosLayout.setVerticalGroup(
             abaDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(abaDadosLayout.createSequentialGroup()
-                .addGap(19, 19, 19)
+                .addGap(18, 18, 18)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lblCodigo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -256,31 +221,158 @@ public class FormCategoria extends javax.swing.JDialog {
                 .addComponent(lblNomeCategoria)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(207, Short.MAX_VALUE))
+                .addContainerGap(218, Short.MAX_VALUE))
         );
 
         pnlAbas.addTab("Dados", abaDados);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pnlNav, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnlAbas))
-                .addContainerGap())
+        jPanel2.add(pnlAbas);
+        pnlAbas.setBounds(10, 140, 620, 455);
+
+        pnlCima.setBackground(new java.awt.Color(31, 31, 31));
+
+        lblAcademia.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        lblAcademia.setForeground(new java.awt.Color(204, 204, 204));
+        lblAcademia.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblAcademia.setText("Controle de Categorias");
+
+        javax.swing.GroupLayout pnlCimaLayout = new javax.swing.GroupLayout(pnlCima);
+        pnlCima.setLayout(pnlCimaLayout);
+        pnlCimaLayout.setHorizontalGroup(
+            pnlCimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlCimaLayout.createSequentialGroup()
+                .addComponent(lblAcademia, javax.swing.GroupLayout.PREFERRED_SIZE, 419, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 231, Short.MAX_VALUE))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(pnlNav, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(pnlAbas, javax.swing.GroupLayout.DEFAULT_SIZE, 444, Short.MAX_VALUE)
-                .addContainerGap())
+        pnlCimaLayout.setVerticalGroup(
+            pnlCimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlCimaLayout.createSequentialGroup()
+                .addComponent(lblAcademia, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
+
+        jPanel2.add(pnlCima);
+        pnlCima.setBounds(0, 0, 650, 60);
+
+        pnlNavegar.setBackground(new java.awt.Color(102, 102, 102));
+        pnlNavegar.setMinimumSize(new java.awt.Dimension(365, 30));
+        pnlNavegar.setPreferredSize(new java.awt.Dimension(365, 30));
+        pnlNavegar.setLayout(new java.awt.GridLayout(1, 0));
+
+        btnPrimeiro.setBackground(new java.awt.Color(102, 102, 102));
+        btnPrimeiro.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnPrimeiro.setForeground(new java.awt.Color(255, 255, 255));
+        btnPrimeiro.setText("Primeiro");
+        btnPrimeiro.setBorder(null);
+        btnPrimeiro.setContentAreaFilled(false);
+        btnPrimeiro.setOpaque(true);
+        btnPrimeiro.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnPrimeiroMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnPrimeiroMouseExited(evt);
+            }
+        });
+        btnPrimeiro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPrimeiroActionPerformed(evt);
+            }
+        });
+        pnlNavegar.add(btnPrimeiro);
+
+        btnProximo.setBackground(new java.awt.Color(102, 102, 102));
+        btnProximo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnProximo.setForeground(new java.awt.Color(255, 255, 255));
+        btnProximo.setText("Próximo");
+        btnProximo.setBorder(null);
+        btnProximo.setContentAreaFilled(false);
+        btnProximo.setOpaque(true);
+        btnProximo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnProximoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnProximoMouseExited(evt);
+            }
+        });
+        btnProximo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnProximoActionPerformed(evt);
+            }
+        });
+        pnlNavegar.add(btnProximo);
+
+        btnAnterior.setBackground(new java.awt.Color(102, 102, 102));
+        btnAnterior.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnAnterior.setForeground(new java.awt.Color(255, 255, 255));
+        btnAnterior.setText("Anterior");
+        btnAnterior.setBorder(null);
+        btnAnterior.setContentAreaFilled(false);
+        btnAnterior.setOpaque(true);
+        btnAnterior.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnAnteriorMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnAnteriorMouseExited(evt);
+            }
+        });
+        btnAnterior.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAnteriorActionPerformed(evt);
+            }
+        });
+        pnlNavegar.add(btnAnterior);
+
+        btnUltimo.setBackground(new java.awt.Color(102, 102, 102));
+        btnUltimo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnUltimo.setForeground(new java.awt.Color(255, 255, 255));
+        btnUltimo.setText("Último");
+        btnUltimo.setBorder(null);
+        btnUltimo.setContentAreaFilled(false);
+        btnUltimo.setOpaque(true);
+        btnUltimo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnUltimoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnUltimoMouseExited(evt);
+            }
+        });
+        btnUltimo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUltimoActionPerformed(evt);
+            }
+        });
+        pnlNavegar.add(btnUltimo);
+
+        btnFechar.setBackground(new java.awt.Color(102, 102, 102));
+        btnFechar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnFechar.setForeground(new java.awt.Color(255, 255, 255));
+        btnFechar.setText("Fechar");
+        btnFechar.setContentAreaFilled(false);
+        btnFechar.setOpaque(true);
+        btnFechar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnFecharMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnFecharMouseExited(evt);
+            }
+        });
+        btnFechar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFecharActionPerformed(evt);
+            }
+        });
+        pnlNavegar.add(btnFechar);
+
+        jPanel2.add(pnlNavegar);
+        pnlNavegar.setBounds(0, 59, 651, 60);
+
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(0, 0, 650, 620);
 
         bindingGroup.bind();
 
@@ -288,44 +380,6 @@ public class FormCategoria extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
     
     
-    private void btnFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFecharActionPerformed
-        // TODO add your handling code here:
-        dispose();
-    }//GEN-LAST:event_btnFecharActionPerformed
-
-    private void btnPrimeiroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPrimeiroActionPerformed
-        // TODO add your handling code here:
-        tblCategoria.setRowSelectionInterval(0, 0);
-        tblCategoria.scrollRectToVisible(tblCategoria.getCellRect(0, 0, true));
-    }//GEN-LAST:event_btnPrimeiroActionPerformed
-
-    private void btnProximoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProximoActionPerformed
-        // TODO add your handling code here:
-        int linha = tblCategoria.getSelectedRow();
-        if((linha+1)<=(tblCategoria.getRowCount())-1){
-            linha++;
-        }
-        tblCategoria.setRowSelectionInterval(linha, linha);
-        tblCategoria.scrollRectToVisible(tblCategoria.getCellRect(linha, 0, true));
-    }//GEN-LAST:event_btnProximoActionPerformed
-
-    private void btnAnteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnteriorActionPerformed
-        // TODO add your handling code here:
-        int linha = tblCategoria.getSelectedRow();
-        if((linha-1) >= 0){
-            linha--;
-        }
-        tblCategoria.setRowSelectionInterval(linha, linha);
-        tblCategoria.scrollRectToVisible(tblCategoria.getCellRect(linha, 0, true));
-    }//GEN-LAST:event_btnAnteriorActionPerformed
-
-    private void btnUltimoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUltimoActionPerformed
-        // TODO add your handling code here:
-        int linha = tblCategoria.getRowCount()-1;
-        tblCategoria.setRowSelectionInterval(linha, linha);
-        tblCategoria.scrollRectToVisible(tblCategoria.getCellRect(linha, 0, true));
-    }//GEN-LAST:event_btnUltimoActionPerformed
-
     private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
         // TODO add your handling code here:
         int opcao = JOptionPane.showOptionDialog(null, "Confirmar Exclusão", "Pergunta", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, new String[]{"Sim","Não"}, "Sim");
@@ -370,6 +424,102 @@ public class FormCategoria extends javax.swing.JDialog {
         tblCategoria.setRowSelectionInterval(linha, linha); // seleciona a linha
         txtNomeCategoria.requestFocus(); // caixa de texto nome recebe o foco
     }//GEN-LAST:event_btnNovoActionPerformed
+    
+    void setBackgroundColor(JButton btn){
+        btn.setBackground(new Color(153,153,153));
+    }
+    
+    void resetBackgroundColor(JButton btn){
+        btn.setBackground(new Color(102,102,102));
+    }
+    
+    private void btnPrimeiroMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPrimeiroMouseEntered
+        // TODO add your handling code here:
+        setBackgroundColor(btnPrimeiro);
+    }//GEN-LAST:event_btnPrimeiroMouseEntered
+
+    private void btnPrimeiroMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPrimeiroMouseExited
+        // TODO add your handling code here:
+        resetBackgroundColor(btnPrimeiro);
+    }//GEN-LAST:event_btnPrimeiroMouseExited
+
+    private void btnPrimeiroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPrimeiroActionPerformed
+        // TODO add your handling code here:
+        tblCategoria.setRowSelectionInterval(0, 0);
+        tblCategoria.scrollRectToVisible(tblCategoria.getCellRect(0, 0, true));
+    }//GEN-LAST:event_btnPrimeiroActionPerformed
+
+    private void btnProximoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnProximoMouseEntered
+        // TODO add your handling code here:
+        setBackgroundColor(btnProximo);
+    }//GEN-LAST:event_btnProximoMouseEntered
+
+    private void btnProximoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnProximoMouseExited
+        // TODO add your handling code here:
+        resetBackgroundColor(btnProximo);
+    }//GEN-LAST:event_btnProximoMouseExited
+
+    private void btnProximoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProximoActionPerformed
+        // TODO add your handling code here:
+        int linha = tblCategoria.getSelectedRow();
+        if((linha+1)<=(tblCategoria.getRowCount())-1){
+            linha++;
+        }
+        tblCategoria.setRowSelectionInterval(linha, linha);
+        tblCategoria.scrollRectToVisible(tblCategoria.getCellRect(linha, 0, true));
+    }//GEN-LAST:event_btnProximoActionPerformed
+
+    private void btnAnteriorMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAnteriorMouseEntered
+        // TODO add your handling code here:
+        setBackgroundColor(btnAnterior);
+    }//GEN-LAST:event_btnAnteriorMouseEntered
+
+    private void btnAnteriorMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAnteriorMouseExited
+        // TODO add your handling code here:
+        resetBackgroundColor(btnAnterior);
+    }//GEN-LAST:event_btnAnteriorMouseExited
+
+    private void btnAnteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnteriorActionPerformed
+        // TODO add your handling code here:
+        int linha = tblCategoria.getSelectedRow();
+        if((linha-1) >= 0){
+            linha--;
+        }
+        tblCategoria.setRowSelectionInterval(linha, linha);
+        tblCategoria.scrollRectToVisible(tblCategoria.getCellRect(linha, 0, true));
+    }//GEN-LAST:event_btnAnteriorActionPerformed
+
+    private void btnUltimoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnUltimoMouseEntered
+        // TODO add your handling code here:
+        setBackgroundColor(btnUltimo);
+    }//GEN-LAST:event_btnUltimoMouseEntered
+
+    private void btnUltimoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnUltimoMouseExited
+        // TODO add your handling code here:
+        resetBackgroundColor(btnUltimo);
+    }//GEN-LAST:event_btnUltimoMouseExited
+
+    private void btnUltimoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUltimoActionPerformed
+        // TODO add your handling code here:
+        int linha = tblCategoria.getRowCount()-1;
+        tblCategoria.setRowSelectionInterval(linha, linha);
+        tblCategoria.scrollRectToVisible(tblCategoria.getCellRect(linha, 0, true));
+    }//GEN-LAST:event_btnUltimoActionPerformed
+
+    private void btnFecharMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnFecharMouseEntered
+        // TODO add your handling code here:
+        setBackgroundColor(btnFechar);
+    }//GEN-LAST:event_btnFecharMouseEntered
+
+    private void btnFecharMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnFecharMouseExited
+        // TODO add your handling code here:
+        resetBackgroundColor(btnFechar);
+    }//GEN-LAST:event_btnFecharMouseExited
+
+    private void btnFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFecharActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_btnFecharActionPerformed
 
     /**
      * @param args the command line arguments
@@ -425,14 +575,17 @@ public class FormCategoria extends javax.swing.JDialog {
     private javax.swing.JButton btnSalvar;
     private javax.swing.JButton btnUltimo;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JLabel lblAcademia;
     private javax.swing.JLabel lblCodigo;
     private javax.swing.JLabel lblNomeCategoria;
     private java.util.List<Categoria> listCategoria;
     private javax.swing.JTabbedPane pnlAbas;
-    private javax.swing.JPanel pnlNav;
+    private javax.swing.JPanel pnlCima;
+    private javax.swing.JPanel pnlNavegar;
     private javax.swing.JTable tblCategoria;
     private javax.swing.JTextPane txtCodigo;
     private javax.swing.JTextPane txtNomeCategoria;
